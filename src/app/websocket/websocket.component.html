@@ -1,0 +1,29 @@
+<p>
+  you can send message to server :
+</p>
+<input type="text" required [(ngModel)]="messageToServer" />
+<button (click)="sendMessage(messageToServer)" [disabled]="serverClosed">send</button>
+<button (click)="closeSocketLink()">close connection</button>
+<br>
+<input type="file" required/>
+<button (click)="sendMessageBlob()" [disabled]="serverClosed">sendBlob</button>
+<br>
+<canvas id="myCanvas" width="20" height="10"></canvas>
+<button (click)="sendMessageArrayBuffer()" [disabled]="serverClosed">sendArrayBuffer</button>
+<br>
+<span>echo from server: </span>
+<p>{{serverData}}</p>
+
+
+<hr>
+
+<p>
+  you can send message to server in rxjs way :
+</p>
+<input type="text" required [(ngModel)]="msgToServerRxjs" />
+<button (click)="sendMsg(msgToServerRxjs)">send</button>
+<button (click)="closeSocketRxjs()">close connection</button>
+<br>
+<br>
+<span>echo from server in rxjs way: </span>
+<p>{{rxjsData}}</p>

@@ -1,0 +1,58 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    height: 48px;
+    width: 100%;
+    border-bottom: 1px solid #bbb;
+}
+
+.header .logo {
+    display: inline-block;
+    width: auto;
+    padding: 9px;
+}
+
+.header .logo span {
+    font-size: 1.5em;
+}
+
+.header .menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: 100;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    height: auto;
+}
+
+.header .menu li {
+    display: inline-block;
+    float: left;
+    border-left: 1px solid #ccc;
+    height: 100%;
+}
+
+.header .menu li:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+.header .menu li:hover a{
+    color:#555;
+}
+
+.header .menu li a{
+    display: inline-block;
+    margin: 14px 12px;
+    text-decoration: none;
+    color: #999;
+}
+
+.main{
+    width: 100%;
+    padding: 56px 8px 8px;
+}
