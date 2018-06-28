@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { WebsocketComponent } from './websocket/websocket.component';
 import { SvgExampleComponent } from './svg-example/svg-example.component';
+import { DynamComponentComponent } from './dynam-component/dynam-component.component';
 
 //import { WebsocketRxService } from "./websocket-rx.service";
 
@@ -16,7 +17,8 @@ import "snapsvg-cjs";
   declarations: [
     AppComponent,
     WebsocketComponent,
-    SvgExampleComponent
+    SvgExampleComponent,
+    DynamComponentComponent
   ],
   imports: [
     BrowserModule,

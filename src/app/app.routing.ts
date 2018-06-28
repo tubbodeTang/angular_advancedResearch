@@ -3,6 +3,7 @@ import { ModuleWithProviders } from "@angular/core";
 
 import { SvgExampleComponent } from './svg-example/svg-example.component';
 import { WebsocketComponent } from './websocket/websocket.component';
+import { DynamComponentComponent } from './dynam-component/dynam-component.component';
 
 
 export const routes: Routes = [
@@ -18,6 +19,10 @@ export const routes: Routes = [
     {
         path: 'svg',
         component: SvgExampleComponent,
+    },
+    {
+        path: 'dynamicComponent',
+        component: DynamComponentComponent,
     }
 ]
 
