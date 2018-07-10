@@ -8,9 +8,13 @@ import { WebsocketComponent } from './websocket/websocket.component';
 import { SvgExampleComponent } from './svg-example/svg-example.component';
 import { DynamComponentComponent } from './dynam-component/dynam-component.component';
 
+
 //import { WebsocketRxService } from "./websocket-rx.service";
 
 import "snapsvg-cjs";
+
+import { AlertComponent } from './dynam-component/componentInsert/insert.component';
+import { dynamSvgComponent } from './svg-example/dynamSvgInsert/dynamSvg.component';
 
 
 @NgModule({
@@ -18,7 +22,9 @@ import "snapsvg-cjs";
     AppComponent,
     WebsocketComponent,
     SvgExampleComponent,
-    DynamComponentComponent
+    DynamComponentComponent,
+    AlertComponent,
+    dynamSvgComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,7 @@ import "snapsvg-cjs";
     routing
   ],
   providers: [],
+  entryComponents: [AlertComponent,dynamSvgComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
