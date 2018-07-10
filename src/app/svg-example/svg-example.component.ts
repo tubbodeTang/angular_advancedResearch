@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component, OnInit, ViewChild, ViewContainerRef,
+  ComponentFactory,
+  ComponentRef, ComponentFactoryResolver, OnDestroy
+} from '@angular/core';
+import { dynamSvgComponent } from './dynamSvgInsert/dynamSvg.component';
+
+import * as svgList from './svgInfo.json'
 
 declare var Snap: any;
 
@@ -9,17 +16,21 @@ declare var Snap: any;
 })
 export class SvgExampleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private resolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
     this.createSvg();
+    svgList.forEach(svg => {
+      this.createComponent(svg)
+    })
   }
-  //Create svg
+
+
+  //Create svg by snapSvg
   createSvg() {
 
     let svgCanvas;
     svgCanvas = Snap("#svg");
-    debugger;
     // Lets create big circle in the middle:
     var bigCircle = svgCanvas.circle(150, 150, 100);
     // By default its black, lets change its attributes
@@ -38,4 +49,25 @@ export class SvgExampleComponent implements OnInit {
     })
 
   }
+
+
+
+  componentRef: ComponentRef<dynamSvgComponent>;
+
+  @ViewChild("svg", { read: ViewContainerRef }) container: ViewContainerRef;
+
+  createComponent(svgItem: any) {
+    //this.container.clear();
+    const factory: ComponentFactory<dynamSvgComponent> =
+      this.resolver.resolveComponentFactory(dynamSvgComponent);
+    this.componentRef = this.container.createComponent(factory);
+    this.componentRef.instance.svgItem = svgItem;
+    // this.componentRef.instance.output.subscribe((msg: string) => console.log(msg));
+  }
+
+  ngOnDestroy() {
+    this.componentRef.destroy()
+  }
+
+
 }
