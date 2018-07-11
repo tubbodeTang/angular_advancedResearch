@@ -1,11 +1,11 @@
 import {
   Component, OnInit, ViewChild, ViewContainerRef,
   ComponentFactory,
-  ComponentRef, ComponentFactoryResolver, OnDestroy
+  ComponentRef, ComponentFactoryResolver
 } from '@angular/core';
 import { dynamSvgComponent } from './dynamSvgInsert/dynamSvg.component';
 
-import * as svgList from './svgInfo.json'
+import svgList from "./svgInfo.json";
 
 declare var Snap: any;
 

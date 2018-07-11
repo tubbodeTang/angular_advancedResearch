@@ -1,16 +1,18 @@
  [{
-   "id": "device1",
-   "filename": "assets/img/devices/svg/device23.svg",
-   "pngname": "assets/img/devices/png/device23.png",
-   "x": "150px",
-   "y": "110px",
-   "width": "50px"
+     "id": "device1",
+     "filename": "assets/img/devices/svg/device23.svg",
+     "pngname": "assets/img/devices/png/device23.png",
+     "x": "150px",
+     "y": "110px",
+     "width": "50px"
 
- }, {
-   "id": "device9",
-   "filename": "assets/img/devices/svg/device27.svg",
-   "pngname": "assets/img/devices/png/device27.png",
-   "x": "550px",
-   "y": "0px",
-   "width": "50px"
- }]
+   },
+   {
+     "id": "device9",
+     "filename": "assets/img/devices/svg/device27.svg",
+     "pngname": "assets/img/devices/png/device27.png",
+     "x": "550px",
+     "y": "0px",
+     "width": "50px"
+   }
+ ]
